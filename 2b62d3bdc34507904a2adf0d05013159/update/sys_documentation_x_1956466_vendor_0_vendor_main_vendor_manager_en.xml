@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="vendor_manager" label="Vendor Manager" language="en" table="x_1956466_vendor_0_vendor_main">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>vendor_manager</element>
+            <help/>
+            <hint/>
+            <label>Vendor Manager</label>
+            <language>en</language>
+            <name>x_1956466_vendor_0_vendor_main</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-25 08:38:10</sys_created_on>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_name>Vendor Manager</sys_name>
+            <sys_package display_value="Vendor Management" source="x_1956466_vendor_0">2b62d3bdc34507904a2adf0d05013159</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+            <sys_update_name>sys_documentation_x_1956466_vendor_0_vendor_main_vendor_manager_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-25 08:38:15</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

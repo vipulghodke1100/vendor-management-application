@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <attributes>labelCacheCleanUpExecuted=true</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Check for expired vendors</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>vendor_expiry_checking</internal_name>
+        <label_cache>null</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <master_snapshot_digest/>
+        <name>Vendor</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-28 09:46:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f69643b2c3c10f904a2adf0d05013130</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Vendor</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Vendor Management" source="x_1956466_vendor_0">2b62d3bdc34507904a2adf0d05013159</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_update_name>sys_hub_flow_f69643b2c3c10f904a2adf0d05013130</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-01 05:18:17</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>94afaa80c35d47d04a2adf0d050131ad</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=f69643b2c3c10f904a2adf0d05013130"/>
+    <sys_variable_value action="DELETE" query="document_key=f69643b2c3c10f904a2adf0d05013130"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=f69643b2c3c10f904a2adf0d05013130"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=f69643b2c3c10f904a2adf0d05013130^sys_idNOT INb29643b2c3c10f904a2adf0d05013131"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>f69643b2c3c10f904a2adf0d05013130</id>
+        <name>Vendor Expiry Checking</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-28 09:46:06</sys_created_on>
+        <sys_id>b29643b2c3c10f904a2adf0d05013131</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-28 09:46:06</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=b29643b2c3c10f904a2adf0d05013131"/>
+    <sys_hub_flow_input action="DELETE" query="model=f69643b2c3c10f904a2adf0d05013130"/>
+    <sys_hub_flow_output action="DELETE" query="model=f69643b2c3c10f904a2adf0d05013130"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=f69643b2c3c10f904a2adf0d05013130"/>
+    <sys_hub_trigger_instance_v2 action="DELETE" query="flow=f69643b2c3c10f904a2adf0d05013130"/>
+    <sys_hub_action_instance_v2 action="DELETE" query="flow=f69643b2c3c10f904a2adf0d05013130"/>
+    <sys_hub_sub_flow_instance_v2 action="DELETE" query="flow=f69643b2c3c10f904a2adf0d05013130"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE" query="flow=f69643b2c3c10f904a2adf0d05013130"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=f69643b2c3c10f904a2adf0d05013130"/>
+    <sys_hub_flow_variable action="DELETE" query="model=f69643b2c3c10f904a2adf0d05013130"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_f69643b2c3c10f904a2adf0d05013130"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_f69643b2c3c10f904a2adf0d05013130"/>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=f69643b2c3c10f904a2adf0d05013130"/>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=f69643b2c3c10f904a2adf0d05013130"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</application>
+        <file_path/>
+        <instance_id>6f98bb02ffc61e18c812f8e4fc4fd919</instance_id>
+        <instance_name>dev291661</instance_name>
+        <name>sys_hub_flow_f69643b2c3c10f904a2adf0d05013130</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow"><sys_hub_flow action="INSERT_OR_UPDATE"><access>public</access><acls/><active>false</active><annotation/><attributes>labelCacheCleanUpExecuted=true</attributes><authored_on_release_version>28100</authored_on_release_version><callable_by_client_api>false</callable_by_client_api><category/><compiler_build/><copied_from/><copied_from_name/><description>Check for expired vendors</description><display_name_after_preview/><flow_priority>MEDIUM</flow_priority><generation_source/><internal_name>vendor_expiry_checking</internal_name><label_cache>null</label_cache><latest_snapshot/><master_snapshot/><master_snapshot_digest/><name>Vendor</name><natlang/><outputs/><pre_compiled>false</pre_compiled><remote_trigger_id/><run_as>user</run_as><run_with_roles/><sc_callable>false</sc_callable><show_draft_actions>false</show_draft_actions><show_triggered_flows>false</show_triggered_flows><status>draft</status><substatus/><sys_class_name>sys_hub_flow</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-28 09:46:06</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>f69643b2c3c10f904a2adf0d05013130</sys_id><sys_mod_count>8</sys_mod_count><sys_name>Vendor</sys_name><sys_overrides/><sys_package display_value="Vendor Management" source="x_1956466_vendor_0">2b62d3bdc34507904a2adf0d05013159</sys_package><sys_policy/><sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope><sys_update_name>sys_hub_flow_f69643b2c3c10f904a2adf0d05013130</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-06-01 05:18:17</sys_updated_on><type>flow</type><updation_source/><version>2</version><version_record>94afaa80c35d47d04a2adf0d050131ad</version_record></sys_hub_flow><sys_translated_text action="delete_multiple" query="documentkey=f69643b2c3c10f904a2adf0d05013130"/><sys_variable_value action="delete_multiple" query="document_key=f69643b2c3c10f904a2adf0d05013130"/><sys_hub_flow_stage action="delete_multiple" query="flow=f69643b2c3c10f904a2adf0d05013130"/><sys_flow_cat_variable_model action="delete_multiple" query="id=f69643b2c3c10f904a2adf0d05013130^sys_idNOT INb29643b2c3c10f904a2adf0d05013131"/><sys_flow_cat_variable_model action="INSERT_OR_UPDATE"><id>f69643b2c3c10f904a2adf0d05013130</id><name>Vendor Expiry Checking</name><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-28 09:46:06</sys_created_on><sys_id>b29643b2c3c10f904a2adf0d05013131</sys_id><sys_mod_count>0</sys_mod_count><sys_scope/><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-28 09:46:06</sys_updated_on></sys_flow_cat_variable_model><sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=b29643b2c3c10f904a2adf0d05013131"/><sys_hub_flow_input action="delete_multiple" query="model=f69643b2c3c10f904a2adf0d05013130"/><sys_hub_flow_output action="delete_multiple" query="model=f69643b2c3c10f904a2adf0d05013130"/><sys_hub_alias_mapping action="delete_multiple" query="source_id=f69643b2c3c10f904a2adf0d05013130"/><sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=f69643b2c3c10f904a2adf0d05013130"/><sys_hub_action_instance_v2 action="delete_multiple" query="flow=f69643b2c3c10f904a2adf0d05013130"/><sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=f69643b2c3c10f904a2adf0d05013130"/><sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=f69643b2c3c10f904a2adf0d05013130"/><sys_hub_pill_compound action="delete_multiple" query="attached_to=f69643b2c3c10f904a2adf0d05013130"/><sys_hub_flow_variable action="delete_multiple" query="model=f69643b2c3c10f904a2adf0d05013130"/><sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_f69643b2c3c10f904a2adf0d05013130"/><sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_f69643b2c3c10f904a2adf0d05013130"/><sys_flow_trigger_plan action="delete_multiple" query="plan_id=f69643b2c3c10f904a2adf0d05013130"/><sys_flow_subflow_plan action="delete_multiple" query="plan_id=f69643b2c3c10f904a2adf0d05013130"/></record_update>]]></payload>
+        <payload_hash>1987828901</payload_hash>
+        <record_name>Vendor</record_name>
+        <reverted_from/>
+        <source>e762d3bdc34507904a2adf0d0501317b</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-01 05:18:17</sys_created_on>
+        <sys_id>b2afea80c35d47d04a2adf0d050131ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19e819e54910000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-01 05:18:17</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>3eafea80e75d47d01775bbc0fbb457b8</update_guid>
+        <update_guid_history>3eafea80e75d47d01775bbc0fbb457b8:1987828901,122747f203c10f9004c50137ce107b04:-2088304211,6717c3f2b5c10f90a56c8caacead217f:1113682940,12e60fb2abc10f9028c53c41e4894fd1:1271662564,efc60bb29dc10f900de82119f6ba9bbe:-2020653962,a8c6c7b28bc10f9063812a975e75ef1b:-1525825014,4cb607b232c10f9058d587d9836a3474:-536539821,7e9643b24dc10f90fcb3da564e33bb36:-129047042</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-01 08:23:42</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>5e0ffeaad3c04b4cab6a64ac1f6fe6a1</sys_id>
+        <sys_metadata>f69643b2c3c10f904a2adf0d05013130</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Vendor</sys_name>
+        <sys_package display_value="Vendor Management" source="x_1956466_vendor_0">2b62d3bdc34507904a2adf0d05013159</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_scope_delete display_value="">658f8e13225f41d693e248d245698ca4</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_f69643b2c3c10f904a2adf0d05013130</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_f69643b2c3c10f904a2adf0d05013130">b2afea80c35d47d04a2adf0d050131ba</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-01 08:23:42</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

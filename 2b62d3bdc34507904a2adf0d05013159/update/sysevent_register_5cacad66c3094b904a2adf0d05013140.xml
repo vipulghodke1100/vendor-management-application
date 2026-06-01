@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
+    <sysevent_register action="INSERT_OR_UPDATE">
+        <caller_access/>
+        <derived_priority>100</derived_priority>
+        <description>Event Notification for Expired Vendor</description>
+        <event_name>x_1956466_vendor_0.vendor.expiry.reminde</event_name>
+        <fired_by/>
+        <priority>100</priority>
+        <queue/>
+        <suffix>vendor.expiry.reminder</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-27 09:11:37</sys_created_on>
+        <sys_id>5cacad66c3094b904a2adf0d05013140</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1956466_vendor_0.vendor.expiry.reminde</sys_name>
+        <sys_package display_value="Vendor Management" source="x_1956466_vendor_0">2b62d3bdc34507904a2adf0d05013159</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_update_name>sysevent_register_5cacad66c3094b904a2adf0d05013140</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-27 09:11:37</sys_updated_on>
+        <table>x_1956466_vendor_0_vendor_main</table>
+    </sysevent_register>
+</record_update>

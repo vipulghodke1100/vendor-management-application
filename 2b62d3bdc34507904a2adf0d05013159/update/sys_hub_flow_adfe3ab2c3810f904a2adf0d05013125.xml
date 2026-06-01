@@ -1,0 +1,1154 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=343108000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Flow to renew the vendor expiry</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>vendor_renewal_flow</internal_name>
+        <label_cache>[{"name":"Updated_1.current.renewal_days","label":"Trigger - Record Updated➛Vendor Main Record➛Renewal Days","reference":"","reference_display":"Renewal Days","type":"integer","base_type":"integer","parent_table_name":"x_1956466_vendor_0_vendor_main","column_name":"renewal_days","usedInstances":{"70f3142b-3a80-4c1d-9755-5b2cdd24eba4":["approval_reason"]}},{"name":"Updated_1.current.vendor_manager","label":"Trigger - Record Updated➛Vendor Main Record➛Vendor Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1956466_vendor_0_vendor_main","column_name":"vendor_manager","usedInstances":{"70f3142b-3a80-4c1d-9755-5b2cdd24eba4":["approval_conditions"]}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Vendor Main Record","reference":"x_1956466_vendor_0_vendor_main","reference_display":"Vendor Main","type":"reference","base_type":"reference","usedInstances":{"70f3142b-3a80-4c1d-9755-5b2cdd24eba4":["record"],"01297a0e-a76b-49b4-b15a-c3be9b80e628":["record"],"c190ae80-8304-4165-a819-e376462b5b5c":["record"]},"attributes":{}},{"name":"70f3142b-3a80-4c1d-9755-5b2cdd24eba4.approval_state","label":"1 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"88cdbd4a-4825-4343-95ea-81e065f47e34":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master_snapshot>8ddb57c4c31587d04a2adf0d0501315d</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Vendor Renewal Flow</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>dfdbd7c4c31587d04a2adf0d050131b2</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-28 09:12:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>adfe3ab2c3810f904a2adf0d05013125</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name>Vendor Renewal Flow</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Vendor Management" source="x_1956466_vendor_0">2b62d3bdc34507904a2adf0d05013159</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_update_name>sys_hub_flow_adfe3ab2c3810f904a2adf0d05013125</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-01 08:31:24</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>24eb1bc4c31587d04a2adf0d050131e8</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=adfe3ab2c3810f904a2adf0d05013125"/>
+    <sys_variable_value action="delete_multiple" query="document_key=adfe3ab2c3810f904a2adf0d05013125"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_1956466_vendor_0_vendor_main">renewal_daysVALCHANGES^state=pending_renewal<item endquery="false" field="renewal_days" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item display_value="Pending Renewal" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="pending_renewal"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>false</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-01 08:31:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>dfdbd7c4c31587d04a2adf0d050131b2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-01 08:31:23</sys_updated_on>
+        <table>x_1956466_vendor_0_vendor_main</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>adfe3ab2c3810f904a2adf0d05013125</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-01 08:31:24</sys_created_on>
+        <sys_id>dbdbd7c4c31587d04a2adf0d050131b3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-01 08:31:24</sys_updated_on>
+        <trigger display_value="">dfdbd7c4c31587d04a2adf0d050131b2</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=adfe3ab2c3810f904a2adf0d05013125^sys_idNOT INdbdbd7c4c31587d04a2adf0d050131b3"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=adfe3ab2c3810f904a2adf0d05013125"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=adfe3ab2c3810f904a2adf0d05013125^sys_idNOT INedfe3ab2c3810f904a2adf0d05013129"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>adfe3ab2c3810f904a2adf0d05013125</id>
+        <name>Vendor Renewal Flow</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-28 09:12:42</sys_created_on>
+        <sys_id>edfe3ab2c3810f904a2adf0d05013129</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-28 09:12:42</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=edfe3ab2c3810f904a2adf0d05013129"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=adfe3ab2c3810f904a2adf0d05013125^sys_idNOT IN143f32f2c3810f904a2adf0d0501311c,203f32f2c3810f904a2adf0d05013133,d43ffeb2c3810f904a2adf0d050131aa"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Vendor Renewal Flow">adfe3ab2c3810f904a2adf0d05013125</model>
+        <model_id>adfe3ab2c3810f904a2adf0d05013125</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_adfe3ab2c3810f904a2adf0d05013125</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-28 09:13:43</sys_created_on>
+        <sys_id>143f32f2c3810f904a2adf0d0501311c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-28 09:42:42</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=143f32f2c3810f904a2adf0d0501311c"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Vendor Renewal Flow">adfe3ab2c3810f904a2adf0d05013125</model>
+        <model_id>adfe3ab2c3810f904a2adf0d05013125</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_adfe3ab2c3810f904a2adf0d05013125</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-28 09:13:43</sys_created_on>
+        <sys_id>203f32f2c3810f904a2adf0d05013133</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-28 09:13:43</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=203f32f2c3810f904a2adf0d05013133"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Vendor Renewal Flow">adfe3ab2c3810f904a2adf0d05013125</model>
+        <model_id>adfe3ab2c3810f904a2adf0d05013125</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_adfe3ab2c3810f904a2adf0d05013125</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-28 09:13:42</sys_created_on>
+        <sys_id>d43ffeb2c3810f904a2adf0d050131aa</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-28 09:42:42</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d43ffeb2c3810f904a2adf0d050131aa"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=adfe3ab2c3810f904a2adf0d05013125"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=adfe3ab2c3810f904a2adf0d05013125"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=adfe3ab2c3810f904a2adf0d05013125^sys_idNOT IN483ff672c3810f904a2adf0d050131f7"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Vendor Renewal Flow">adfe3ab2c3810f904a2adf0d05013125</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-28 09:13:41</sys_created_on>
+        <sys_id>483ff672c3810f904a2adf0d050131f7</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-28 09:45:07</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=adfe3ab2c3810f904a2adf0d05013125^sys_idNOT IN1be58b32c3c10f904a2adf0d05013101,579f7a32c3810f904a2adf0d0501314a,eab1033ac3810f904a2adf0d05013138"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Vendor Renewal Flow">adfe3ab2c3810f904a2adf0d05013125</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>fa174b0d-aa57-4b15-bf98-6ce818726f46</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-28 09:43:08</sys_created_on>
+        <sys_id>1be58b32c3c10f904a2adf0d05013101</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-28 09:45:07</sys_updated_on>
+        <ui_id>c190ae80-8304-4165-a819-e376462b5b5c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UXWvbMBT9K0HPxthxapq8DUJgD22h2/LSdUKWbhINWfZkKU0W8t93Zctp+rEulMAYzE++3+dcHe7djkhBJmQEIknHac6zNMuGSTK8HKVFnhXpUGQMICUR0awEzDTAKyPQXjPlvGO3+1ILZkHQNObOGNB2v8e4kE2t2HYe0tDDV1IJjJPJ3X1EamawowVDJrtnIbutgSpWgMLCacVdiU0HH6fY41S0ffVtD/c5fD8DbRG6U+mdGPJ40iQisLGgBeC4BVMNRKRkGmlWZksm1jh0GGDiRqvtIWMlte2YlmzTyJ/Yf5T4vAUgNR62cDBp2FC/nEpyuKmtrHTnsaxQ/eYq5Up93VHwu4UFc8oe7dY12A9qD9mD6BAuPq2qh9t+3kzqll1AqyrO1MFi1hpZOAuNfw5Q0C6lZHUt9ZLWplrLthihlPFSoREvVPWAMxu51DHjHneMC2LxDP3T1j1nRnoSV9gGi/ctefrD+bkdjQCYtpxbwrR9KExtuJG1/YCN1xBg7qMg1+LiLQHw8eN7H/V8lOyGpuOLfJTndI3zK0OT/qdkUr/U7rwNDq664Ptk/NkDGVx3QE4l8aT4N6SCkJ/4go4vzqbjy7+k44DoHxPyn+SbDN+8X0cv3Sq2OZIuAkAKTNHGMuuary5JMlTcd+B4gb915ksBn1j1TmVDibMsDLpp0ckc+wYzCUo0r5DupR0G0HUYcDjTZ9N3mift9/9an/Fa3/8CF2n6k14IAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=1be58b32c3c10f904a2adf0d05013101"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Vendor Renewal Flow">adfe3ab2c3810f904a2adf0d05013125</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-28 09:15:34</sys_created_on>
+        <sys_id>579f7a32c3810f904a2adf0d0501314a</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-28 09:45:07</sys_updated_on>
+        <ui_id>70f3142b-3a80-4c1d-9755-5b2cdd24eba4</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1YXW/bOgz9K4GfNiDN5Dh2nbwV6ApsuLsD+vXSFIYi06kGRfZku20W+L+PsuTETdMsaLN1G/ZSVJRIHpKHEp2rhcNjZ+QchkkfhsM+mbiEeISEPiOhBxPvMDj0KCNO15F0BnhSAUtVjOtbKkotWCwuspgWEEduj5VKgSyqCvdjnmeCzi/tMZSwGy5i3HdGV9ddJ6MKLRagnNFibauYZxAJOgGBiscpK2dotPPhGG3sirbRPm3grsPXPnAdW+sR10Lc0nhI14H7AmQM6C2hIoeuM6MSo0zV3BkVqkSBAhp/lmK+PHHDZWECndH7nH9D815fn0sAI2M2CctlZBPU5CblDD5nBU+lkRR0IprEpaKcyf9NBDq1kNBSFK3Uljnag0xD1iAMwuTsJr07bfydcFkHZ9GKlFGxXNGiUHxSFpDraoCAOiczmmVcTqNMpbe8VkYos95U4KKXiPQOfeZ8KnuUadw9TBDtnaD8uBZfUsV1EJ/QDCpXdfDR11L7NWFYwFEdswkYT+VM8aw4Qpu3YBFWXUvUCdtaeraqtDG34ul95A79YBAE0S16TVVEmn9mlMvHhL2sNzufzObzuHuuMXTqwnV3xv9A+XE8lrj1MpLGtOWtu523VrILcUPyOsS1iP4w5v6ItDAIPB//HCYecfsuCSEIQzYklIVB4A+8VZHRHyKmIsIi5als0dfS8f19xtW8cwoS7qjoJCh609lwBfeUORHFdJ5X1dsn+f0Cg8/riTOsl5w2/bBDahrFI5sbxGpz82TSbI/kjSvbH/299Ycb/KENUvLztdwYyX/r1fk5naTdXUj+tYQPuvpBfxIMSRgfxAmZHAxCzz+gDMgBBK4Pfhww3/Ve3H3E3XblxuEGIiUcRHvG2eM4c6JNP3gSdsD3qAVOLMCngNsGqJdrj8T+miAk5JW64O+db9hWMkDrqfiSlkr+aq7uAK9R/mjwrVN1HfYWpnr/mPobM3Xgb6UCbLidWCpjrvHlLb6aOw3yU/gCrMiP5PziatP8sRzWJZ2Cqqrrx0R/ianndchqJikF5E2X7JCa5fep1duaKtsjqznHKtk+Gezrc/X12uTvnPvZVh4kw1Xd4xLTgSxt/64ydgzIsTMaOzKVMHa6Y0efijQhajGeQHDLjVq2WFSVkZSKWgNua7nS1qN8fTJnNxAjqWrpA4lhupXv82edM+ugc4y4353z1hvz46wtfxsqjf7GRDYfAU0kJnO8/cL4e3thBv8aZ23Mj5rrSj8oeAU9u5uuvwN31E9YpRQAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=579f7a32c3810f904a2adf0d0501314a"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Vendor Renewal Flow">adfe3ab2c3810f904a2adf0d05013125</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>88cdbd4a-4825-4343-95ea-81e065f47e34</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-28 09:24:47</sys_created_on>
+        <sys_id>eab1033ac3810f904a2adf0d05013138</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-28 09:45:07</sys_updated_on>
+        <ui_id>01297a0e-a76b-49b4-b15a-c3be9b80e628</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1W3W7bNhR+FUJXSebJUpwYjXsVIM0WbG2Aps1N3Qq0eGRzoCiNpBy7hm/3AHvEPUkPfyQ7zewGRYBgQ32RmIfn5/sOv0P6wyriLBpFJ8CS9Cwd5oN0MDhOkuMXJ+lkOJikx2xAAdKoF0laAnoqyCvFcD2norGG1ep9zagBlqVx3igF0qzXuM+4rgVd3gY3tOQzLhjuR6MPH3tRTRVmNKCi0eqrLbOsIRN0AgIDL6q8KTEpubrAHI9F20a/beF+Dd/WwDUL2TNujbhl8aRJL4KFAckAyxVUaOhFJZVIs1LLaGRUgwYFlF1Lsew8Zlwaz7SkC80/Y/6TxPoVgNTy0IVumYUOtc2peA7XteGV9BZDJ6LtXCWaUr7xFGxvoaCNMFu9bTTmg9pCtiA8wuJmVt29betdcunYBbSiyqnoVtQYxSeNAW2PAwS4ppS0rrmcZrWq5twFI5QyngpcxIWo7rCm5lMZ09zijrFBNL5E+4Uz31LFLYnXmAaD14589mdj63oaAXDmODvCmTsodNW54rU5x8RzCDDXvSDXyek+AeRnm/PeyrmR7CJLz06HJ8NhNsf6lcqS9ktJuXyo3Vu3SV77ze+T8TsLhLzxQB5L4l7wDlJByPdsQcenT6bjF8+k44DoPybkb8k3Od57f22dtFOs3pIuAkAKVGTaUNPocZMkA+aNwD5ZIwSbq/wJFjVXy4x19oL97KF5d2V27Pl4b7c6eTgVzwnlO2cQSiRggHgKvUefRpvgkoNg+l+Opx3CUCCbhwLdg/Jkk5gOE/f58a48ybviCXmbQ7gRqV3uc476R2N5dHSe56A1sej65w4usXBJo5EhMTMgBcucpZr8AbmJyY1LQMpGG6LANEoSSpxiYmIzXlvRENmUE/zHNamKQoMhkyX5KSVckldK4Wv0K6pH2BI34JvkwMwpF+6lqdyJaxLEQJoagdUKodqYcRSPI0ILnJkWng2HBUUBwwjRKKJnlTLY8Jz40WsdYzzR6RRU+2svdo72xBwvrPrS5grMuizW2B9Lm9lUDBGFrBLuyC/24C+w5+94CQeH6Ood8TR2u40lwc8uUNu3jfQZ+31yVRC/Yc8IbHO14UKQcMVIXpADdIhdZw4czsNDsrLRtpjbYuyCLvXvVuZbOOwH7yENV9JsmfZBxD9wh/cnFtGbiEP/1UNeE8Ax2gBACufCXhNLzwMY+eevv4m7PUmhqtL3tkP7rSY/A6m1rRvEYUtPwVhQCAgnV1N8O7rrx05r9y78GMf/1TjeG0Y/hNjLokGU++YwDMFvADUGcwzE9nn5+9zWIXDd2aBOUy+3JyykfhXmivo5u5fRAdlSLIY/FO16/fELDllCnFcPAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=eab1033ac3810f904a2adf0d05013138"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=adfe3ab2c3810f904a2adf0d05013125"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=adfe3ab2c3810f904a2adf0d05013125^sys_idNOT IN3291cbf6c3810f904a2adf0d0501318e,69e5c732c3c10f904a2adf0d050131a4"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">9dd5c732c3c10f904a2adf0d05013100</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Vendor Renewal Flow">adfe3ab2c3810f904a2adf0d05013125</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-28 09:24:15</sys_created_on>
+        <sys_id>3291cbf6c3810f904a2adf0d0501318e</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-01 08:31:10</sys_updated_on>
+        <ui_id>88cdbd4a-4825-4343-95ea-81e065f47e34</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UTW/bMAz9K4XPjiF/pW1uxYYCBbYVWItetsKgJTkRJkueJCfNgvz3UZadBluCDUOPu1mPIvke9ehdpHvX9c4+6htrxVJFiy/PcSSUx/B7FyloebSIqFZMOKFVNQBxtAbZ+8BdcwFdZ/SaM0SZsJ2E7dPJIF0JyQwfe3RgsJLjJlrsfgm5bccrCTWXWOPBGaGWmC4YnhoCTXpNU5pn8zwjJLsq0nqe12nGcuCQ470p8d1E+eLDgMRntfh+iNupkzbM00pJHPEXxxVD+osGpOVx1IJi4LTZHhDDgd0r+QqshHJYLvKXX6z4gbWzsvQXG44aKQ/Bw7EapxZgutKC8vvOEwyIg1qOOVTLvlWfgg4/b95AL900b0R6i/V450l7FiOl5mGlN5+nhrdCDQLHoNQU5OEEDsdQ945b/zBc8hYLVS2+Iw6n8o8phmTk0iZLiYekkXqDTb1/EqCeeIIzguQW8fcD/ARGeBUfsQwmB5o1WEGrwWtYzhmUsB/GUn3vPaEgcJRShWngBUuN6NwN9lnzkfU+/t2oRx7d7S5Jk6dFVs9yuCKzgqZsdn1ZlrOyzihjWcFrKJJgVZCVdeD4fv+1JyRn5939VmXfYi+uoWzKlJSn96KYn9qLExtxfhmyPyyDf76/3AVCyP9lOF4GYatg6lHb0Pyfd+HZGz90sME3jFNhkcijx+6mf7sPbNEAgh5DG22+eQmv2P4n/Yq3vCUGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">58664b72c3c10f904a2adf0d0501316e</block>
+        <comment/>
+        <connected_to>88cdbd4a-4825-4343-95ea-81e065f47e34</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Vendor Renewal Flow">adfe3ab2c3810f904a2adf0d05013125</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-28 09:43:00</sys_created_on>
+        <sys_id>69e5c732c3c10f904a2adf0d050131a4</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-01 08:31:10</sys_updated_on>
+        <ui_id>fa174b0d-aa57-4b15-bf98-6ce818726f46</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=adfe3ab2c3810f904a2adf0d05013125"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=adfe3ab2c3810f904a2adf0d05013125"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_adfe3ab2c3810f904a2adf0d05013125</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-28 09:13:43</sys_created_on>
+        <sys_id>183f32f2c3810f904a2adf0d05013118</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Vendor Management" source="x_1956466_vendor_0">2b62d3bdc34507904a2adf0d05013159</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-28 09:13:43</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_adfe3ab2c3810f904a2adf0d05013125</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-28 09:13:43</sys_created_on>
+        <sys_id>243f32f2c3810f904a2adf0d0501312f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Vendor Management" source="x_1956466_vendor_0">2b62d3bdc34507904a2adf0d05013159</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-28 09:13:43</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_adfe3ab2c3810f904a2adf0d05013125</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-28 09:13:43</sys_created_on>
+        <sys_id>683f32f2c3810f904a2adf0d0501313a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Vendor Management" source="x_1956466_vendor_0">2b62d3bdc34507904a2adf0d05013159</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-28 09:13:43</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_adfe3ab2c3810f904a2adf0d05013125"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_adfe3ab2c3810f904a2adf0d05013125"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Flow to renew the vendor expiry</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>vendor_renewal_flow</internal_name>
+        <label_cache>[{"name":"Updated_1.current.renewal_days","label":"Trigger - Record Updated➛Vendor Main Record➛Renewal Days","reference":"","reference_display":"Renewal Days","type":"integer","base_type":"integer","parent_table_name":"x_1956466_vendor_0_vendor_main","column_name":"renewal_days","usedInstances":{"70f3142b-3a80-4c1d-9755-5b2cdd24eba4":["approval_reason"]}},{"name":"Updated_1.current.vendor_manager","label":"Trigger - Record Updated➛Vendor Main Record➛Vendor Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1956466_vendor_0_vendor_main","column_name":"vendor_manager","usedInstances":{"70f3142b-3a80-4c1d-9755-5b2cdd24eba4":["approval_conditions"]}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Vendor Main Record","reference":"x_1956466_vendor_0_vendor_main","reference_display":"Vendor Main","type":"reference","base_type":"reference","usedInstances":{"70f3142b-3a80-4c1d-9755-5b2cdd24eba4":["record"],"01297a0e-a76b-49b4-b15a-c3be9b80e628":["record"],"c190ae80-8304-4165-a819-e376462b5b5c":["record"]},"attributes":{}},{"name":"70f3142b-3a80-4c1d-9755-5b2cdd24eba4.approval_state","label":"1 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"88cdbd4a-4825-4343-95ea-81e065f47e34":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master>true</master>
+        <name>Vendor Renewal Flow</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Vendor Renewal Flow">adfe3ab2c3810f904a2adf0d05013125</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-01 08:31:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8ddb57c4c31587d04a2adf0d0501315d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-01 08:31:14</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=8ddb57c4c31587d04a2adf0d0501315d"/>
+    <sys_variable_value action="delete_multiple" query="document_key=8ddb57c4c31587d04a2adf0d0501315d"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=8ddb57c4c31587d04a2adf0d0501315d"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=8ddb57c4c31587d04a2adf0d0501315d^sys_idNOT IN49db57c4c31587d04a2adf0d0501315e"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>8ddb57c4c31587d04a2adf0d0501315d</id>
+        <name>Vendor Renewal Flow</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-01 08:31:14</sys_created_on>
+        <sys_id>49db57c4c31587d04a2adf0d0501315e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-01 08:31:14</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=49db57c4c31587d04a2adf0d0501315e"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=8ddb57c4c31587d04a2adf0d0501315d^sys_idNOT IN16db97c4c31587d04a2adf0d05013152,45db57c4c31587d04a2adf0d05013160,f1db57c4c31587d04a2adf0d050131b2"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Vendor Renewal Flow">8ddb57c4c31587d04a2adf0d0501315d</model>
+        <model_id>8ddb57c4c31587d04a2adf0d0501315d</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_8ddb57c4c31587d04a2adf0d0501315d</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-01 08:31:19</sys_created_on>
+        <sys_id>16db97c4c31587d04a2adf0d05013152</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-01 08:31:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=16db97c4c31587d04a2adf0d05013152"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Vendor Renewal Flow">8ddb57c4c31587d04a2adf0d0501315d</model>
+        <model_id>8ddb57c4c31587d04a2adf0d0501315d</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_8ddb57c4c31587d04a2adf0d0501315d</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-01 08:31:14</sys_created_on>
+        <sys_id>45db57c4c31587d04a2adf0d05013160</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-01 08:31:14</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=45db57c4c31587d04a2adf0d05013160"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Vendor Renewal Flow">8ddb57c4c31587d04a2adf0d0501315d</model>
+        <model_id>8ddb57c4c31587d04a2adf0d0501315d</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_8ddb57c4c31587d04a2adf0d0501315d</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-01 08:31:17</sys_created_on>
+        <sys_id>f1db57c4c31587d04a2adf0d050131b2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-01 08:31:17</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f1db57c4c31587d04a2adf0d050131b2"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=8ddb57c4c31587d04a2adf0d0501315d"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8ddb57c4c31587d04a2adf0d0501315d"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=8ddb57c4c31587d04a2adf0d0501315d^sys_idNOT IN07dbd7c4c31587d04a2adf0d0501310f"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Vendor Renewal Flow">8ddb57c4c31587d04a2adf0d0501315d</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-01 08:31:22</sys_created_on>
+        <sys_id>07dbd7c4c31587d04a2adf0d0501310f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-01 08:31:22</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=8ddb57c4c31587d04a2adf0d0501315d^sys_idNOT IN0bdbd7c4c31587d04a2adf0d0501310b,4bdbd7c4c31587d04a2adf0d0501310c,cbdbd7c4c31587d04a2adf0d05013109"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Vendor Renewal Flow">8ddb57c4c31587d04a2adf0d0501315d</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>88cdbd4a-4825-4343-95ea-81e065f47e34</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-01 08:31:22</sys_created_on>
+        <sys_id>0bdbd7c4c31587d04a2adf0d0501310b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-01 08:31:22</sys_updated_on>
+        <ui_id>01297a0e-a76b-49b4-b15a-c3be9b80e628</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1W3W7bNhR+FUJXSebJVpwYjXsV1M0WLG2ApstN3Qq0eORwoCiNpBx7hm/3AHvEPkkPfySrSeOmQIEi23yRmOeP3zn8PtLv1hFn0Tg6AjZITpJRNkyGw8PB4PDZUTIbDWfJIRtSgCTqRZIWgJEKslIxXC+oqK1hvf69YtQAS5M4q5UCaTYb9DOuK0FX1yEMLdkNFwz90fjd+15UUYUVDahovL7jeiwkQWcgMPRNg+kuRrOq7JqVWV0grpQ3xouQOQkecj5BDyZZOMmgF8HSgGSAQHIqNPSigkrsslSraGxUjQYFlF1KsWojbrg0vtGCLjX/C3c+Gti4HLCzLAyhXaZhQN6cT6ihV1g5M7Vq51XyDLSfCYOc1sK86Np8wGVleCl9iqEz0WSXoi7kaz+RqC3QOY9aIwiobJ8WuW8rv7opb980IM+4dCMJLYoyo6JdUWMUn9XGwllHIMDNuKBVxeU8rVS54C4ZoRTxXOAizkV5i3tqPpcxzSzuGKdK4zO0T5z5mipum3iFZTB504v0Sr8QVOttKzjD9M/aIvGNhRZSNwU3gtQxwSZnilfmFLdaQAC+6QXSz453MSw72RKqU3NL/GWanByPjkajdIH7lyodNF8KyuV9BVw7J3nlnd8mhkdAbcTw1lHgy9CDHu7ZLrq55LV3BDUcfzc1PHtKaghtPHk5fE0Eg8Od12yHSY73uiMAhIRNUZFqQ02tp/VgMGTeCOyDNUKwuZ0/wLLiapWy1p6znz00H67MAz6f7+2Wbve19SOhfJuSHzHvRslnHATTXziARsZQ4AwMpP5A7kg5OMl1cLaP23fTczIauM8TUvV/4I3zLXqbw7ylul3uCo76B1N5cHCa4fQ1sXj7p64BYhsgtcaeibkBkrPUWcrZH5CZmFy5AqSotSEK8HQlocSxMia24qXlHpF1McN/XJMyzzUYMluRnxLCJXmpFL6MvyIJhd3iCvzYHJgF5cI9S6XjgCaBU6SuEFilEKrNmUbxNCI0R+U18Gw6LCnqAMaIRhF9UyqDR5ARL+AmMMYzns9BNb9fYxdoz9D1hbs+t7VCZ20Va+xPpa1sSoaIQlUJt+QXSwXkO7zlBeztY6gPxNN4OGwqCX4eAtW9s6Sv2O+T85x4hz0jsMPVhgtBwkUleU72MCB2k9lzOPf3ydpm282ci7EJXekLS/wODvvB20zDuTQd0y6I+Adu8RbGTfQ2Y99/9ZA3BFBYWwDYwqmwt83K9wGMfPz7H+LuYJKrsvCzbdF+bcg/oKmN3TeQw249B2NBISBUrqb4ArUXklVr+7r8L8d/lRw/E6MXIc4yr+1jt0OHQQS/AVSYzDERx+fp72vbgNDrgwNqOfW8q7BQ+mXQFfU6+6yiA9JhLKbfJ+1m8/4T5fHKeikQAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=0bdbd7c4c31587d04a2adf0d0501310b"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Vendor Renewal Flow">8ddb57c4c31587d04a2adf0d0501315d</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>fa174b0d-aa57-4b15-bf98-6ce818726f46</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-01 08:31:22</sys_created_on>
+        <sys_id>4bdbd7c4c31587d04a2adf0d0501310c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-01 08:31:22</sys_updated_on>
+        <ui_id>c190ae80-8304-4165-a819-e376462b5b5c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXW/aMBT9K8jPCCUEUOFtKkKa1A+p3XjpuuhiX8CT8zHboTDEf99N7ISIVh2V+oLGE/fLPudwD37aMynYhA1QBOE4HPEojKJ+EPSvBuFiFC3CvogAMWRdlkKC1KmRZ1pQvAFVlIn9/nsuwKKIwx4vtMbUHg5UF9LkCnZz30YZvpZKUJ1Nnp67LAdNJ1rUbLI/KZ0LScECFbU+1JhOMdpdXsYi40VCuGJZJ2/85NRXOl+nVKGhEk4YdBluLaYCCcgSlMEuSyAllpnesYnVBSU0grhP1a7pWMvUOqIJbI38QzcPgrJvicSMexGaMPYCufRyChYe6WRuC93olUmOxmkicAmFstftnGu4z63MUjdiYaHq6UwVSXrnFGHNAa3fozAEAvOSZ4nc0Vo+rrOXhxrkTKaVJJ6iyjioJgJrtVwUtoSzZ6iw0jiBPJfpKs51tpHVMEFJeitFQW+pshe608hV2gNe4u6RqtCbUX5apeegZUnilo6h4UOXmZ25VmDMkQppGP8uSiSOmKcQVypUEsTVJpTDXMvcfqGrNuiBH7p+6RfD9zaMj48L1TrzuPjbOBwPR4PRKN7Q/ZmOg/pLAjJ97YB5VezcuuLHzHAG1NoM36oVeBu698Or3E17tnPnCt4Nw09zw9UlucHTuHg7/MsEQf/dv9nWJlV7b1oGIEhEClRsLNjC/CiCIKK9/YWcXoOfLnxtgzOnPuaPM1jU/phJVMK8Qas2ByYE12LsaJ4YxBc7c19snoxPc0k4CqrPBXnlv3k5nv8CJ1ywQTAJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4bdbd7c4c31587d04a2adf0d0501310c"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Vendor Renewal Flow">8ddb57c4c31587d04a2adf0d0501315d</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-01 08:31:22</sys_created_on>
+        <sys_id>cbdbd7c4c31587d04a2adf0d05013109</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-01 08:31:22</sys_updated_on>
+        <ui_id>70f3142b-3a80-4c1d-9755-5b2cdd24eba4</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1YXW/iOBT9K8hPuxJlHULSwFs1bKVZ7cxI/XopVWScG+qRcTJO0pZF+e97EzuQAcrQHfrQ7bxU9b3XzrmHc2I7t0siIjIip0Hch+GwT6cOpS6lgcdp4MLUPfVPXcYp6RLF5oCVGniiIxw/MFlUgeXyOo1YDlHo9HihNai8LDEfiSyVbHFjyzDC74WMME9Gt3ddkjKNK+agyWi5kToUkmRTkFh60WDaxJgv0mocJbyYI65QNMG/7cyxzXQ+jjGDkyo4tEvgKQcVAeKImcygS+ZMYZOJXpBRrgsMaGDRFyUXq4p7oXLT55w9ZeIffLDbr+piwMa45WA1DC0/JhyPWc4ucWWeF3pFVyI4ZIaSCGJWyPxDO2YKvqS5SJSZkrOpbGYnspirz4YQslqg9XMUGYKAtOqzQm7aii/vk8eLBuS5UDUjtkWZcCZXI5bnWkyLvIKzJCChpnjO0lSoWZjq5EHUkxHKvDeTOOjFMnnEZ2ZipnqMV7h7yCrrnWN8XIdvmBZVE59wGZxcdkm2yD5IlmXrVpDD8FtRITGN2RbCmgVDQTWPa5HmZ/iUB7CYy66V+5Tv1RZfS8kst1b7U+gMPX/g++EDPjXRIW3+mTOhtmV/Uyc7n0zyZQ44AGXjgCsLcwO11X89DOvc9/Kvp3U+m4RVv7Nf/Taylr/RzQ71B/QNqd+29ebl/yPlw8B3PfxzGrvU6Ts0AD8I+JAyHvi+N3DXGkIE2AOTIf7UWaJaHrCa/vMpFXrRuQAFj0x2Ygz91tmxG/S0qQgjtsjK8vdnTfITC77MWAeQ0BjrzLKAqCwLz9JjzZahLNRsw2iXTdCarP9Ckz2/xzj+e7JZIa42WDaRLZ5fx4/V466V+FbAx0pHfn/qD2kQnUQxnZ4MAtc7YRzoCfiOB17kc89xX8HD1Nm3L0TBDpHGAmT70HaE89kBKLZMdG5hPAfPWqge7tqv6vkb+9XxrBRQ+pa89J4ObHyv2KC1bX1NCq1eR/EHgGgU/5dBsSn4TXD/Re/uL73///U+8PZKrXXUX71DeaIiUSHOWqo3b17ILuAr8Dw7U4vr210nqtUdRrEZ6LK827bLzyz1Mp8d0Pzq5l9IyH5EhnXZ+sRmJ7Wdtj7n2aR12+BY3wLemNney32I79VaPFxrKyqQINR6+9PXhBjYEzKaEJUomJDuhFRVYSWuOowVCG6VqGPLZVmaSKGZXcBpDdezqytOXZnxe4hQm3X0u0hYm8HGj/Hl7QBOGv+NC+iMDSnbNDUXogan4UVs7XKXtqBe6Y8r0d7tvKPtdoNf9jvG9SdsXqPVVoZvvyN68u5fA/hEMo4WAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=cbdbd7c4c31587d04a2adf0d05013109"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=8ddb57c4c31587d04a2adf0d0501315d"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=8ddb57c4c31587d04a2adf0d0501315d^sys_idNOT IN3edbd7c4c31587d04a2adf0d05013105,bedbd7c4c31587d04a2adf0d05013107"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">9dd5c732c3c10f904a2adf0d05013100</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Vendor Renewal Flow">8ddb57c4c31587d04a2adf0d0501315d</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-01 08:31:21</sys_created_on>
+        <sys_id>3edbd7c4c31587d04a2adf0d05013105</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-01 08:31:21</sys_updated_on>
+        <ui_id>88cdbd4a-4825-4343-95ea-81e065f47e34</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8lYBnWaBeTuJb4CBAgLQBmiCXNhBWJGUTpUhVpOy4hv+9Sz1sI3XQBs2xN3GWuzs73IG2xLSubp19NFfWyoUms6/PAZHaY/i9JRoqQWaEGc2lk0bnHRCQFajWB27LM6jrxqwER5RLWyvYPJ0MsqVUvBFDjxoarOREQ2bbVyHJMbekUEaXLGJJPE1iSuOLNCqmSRHFPAEBCRZUUAiFV+cjubO7DgneZO02tceta6ReDOe7ocrDCJqGe1YRDYh4cUJzZD8rQVkRkAo0B2eazR5pBPB7rQ7AUmqH5Yi//GLlT2wYZ5m/WAockYk+uD/mg2g9XF6DA6TSMtc2w1W2NJIJ24vDRQmtcvNjrL9wX/tR+xQHhRqzjWor/blXhOwLjG+ESGuRhKj9pJ76MEf5sDTrLyPLG6k7VYagMgzU/gQOtSta5/lsiVCiwkJ5hW+PiuZ+AWSXjFyqcKHwEJbKrLGp37kQmCceorAQ3iB+3cFP0Eg/xScsg8k9zQKsZHm3n1gOZRJkFxC7sXMF1h6GRHXzH62n2I88DJf3+vgU1sjaXWHnlRjm2AW/r/vRpm+357RMojQuJglc0EnKIj65PM+ySVbEjPM4FQWkYb/woHLrwInd7ltLacLf9shHlX2fuy4hK7OIZqfdlU5PueuEr95pqfgPlvLv+ZeOopT+t9Q/W0ravDfCMFvX/AMd9ezt0/fca82kRWqPHrsd/zM+sMHlkuwYWpvmux/qgO1+AWucIjaxBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">58664b72c3c10f904a2adf0d0501316e</block>
+        <comment/>
+        <connected_to>88cdbd4a-4825-4343-95ea-81e065f47e34</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Vendor Renewal Flow">8ddb57c4c31587d04a2adf0d0501315d</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-01 08:31:21</sys_created_on>
+        <sys_id>bedbd7c4c31587d04a2adf0d05013107</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-01 08:31:21</sys_updated_on>
+        <ui_id>fa174b0d-aa57-4b15-bf98-6ce818726f46</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=8ddb57c4c31587d04a2adf0d0501315d"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=8ddb57c4c31587d04a2adf0d0501315d"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8ddb57c4c31587d04a2adf0d0501315d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-01 08:31:20</sys_created_on>
+        <sys_id>2adb97c4c31587d04a2adf0d050131bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Vendor Management" source="x_1956466_vendor_0">2b62d3bdc34507904a2adf0d05013159</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-01 08:31:20</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8ddb57c4c31587d04a2adf0d0501315d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-01 08:31:16</sys_created_on>
+        <sys_id>69db57c4c31587d04a2adf0d050131ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Vendor Management" source="x_1956466_vendor_0">2b62d3bdc34507904a2adf0d05013159</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-01 08:31:16</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8ddb57c4c31587d04a2adf0d0501315d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-01 08:31:18</sys_created_on>
+        <sys_id>8adb97c4c31587d04a2adf0d0501314e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Vendor Management" source="x_1956466_vendor_0">2b62d3bdc34507904a2adf0d05013159</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-01 08:31:18</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_8ddb57c4c31587d04a2adf0d0501315d"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_8ddb57c4c31587d04a2adf0d0501315d"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>adfe3ab2c3810f904a2adf0d05013125</sys_id>
+        <latest_snapshot>8ddb57c4c31587d04a2adf0d0501315d</latest_snapshot>
+        <compiler_build/>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=adfe3ab2c3810f904a2adf0d05013125^sys_idNOT IN23dbd7c4c31587d04a2adf0d050131b5"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan/>
+        <plan_id>adfe3ab2c3810f904a2adf0d05013125</plan_id>
+        <snapshot>8ddb57c4c31587d04a2adf0d0501315d</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-01 08:31:24</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>23dbd7c4c31587d04a2adf0d050131b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-01 08:31:24</sys_updated_on>
+        <trigger display_value="">dfdbd7c4c31587d04a2adf0d050131b2</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=adfe3ab2c3810f904a2adf0d05013125"/>
+</record_update>

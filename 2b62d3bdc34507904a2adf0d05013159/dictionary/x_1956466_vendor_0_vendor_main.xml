@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="7a735b31c38507904a2adf0d05013114" label="Vendor Main" max_length="40" name="x_1956466_vendor_0_vendor_main" type="collection">
+        <element label="Last Reminder Milestone" max_length="40" name="last_reminder_milestone" type="integer"/>
+        <element label="Remarks" max_length="50" name="remarks" type="string"/>
+        <element label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Expiry Period" max_length="40" name="expiry_period" type="integer"/>
+        <element label="Vendor Type" max_length="40" name="vendor_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Service" sequence="0" value="service"/>
+                <element inactive_on_update="false" label="Goods" sequence="1" value="goods"/>
+                <element inactive_on_update="false" label="Consultant" sequence="2" value="consultant"/>
+            </choice>
+        </element>
+        <element label="Vendor Name" max_length="50" name="vendor_name" type="string"/>
+        <element choice="3" default="draft" label="State" max_length="40" name="state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Pending Renewal" sequence="5" value="pending_renewal"/>
+                <element inactive_on_update="false" label="Rejected" sequence="3" value="rejected"/>
+                <element inactive_on_update="false" label="Pending Approval" sequence="1" value="pending_approval"/>
+                <element inactive_on_update="false" label="Draft" sequence="0" value="draft"/>
+                <element inactive_on_update="false" label="Expired" sequence="4" value="expired"/>
+                <element inactive_on_update="false" label="Active" sequence="2" value="active"/>
+            </choice>
+        </element>
+        <element label="Vendor Manager" max_length="32" name="vendor_manager" reference="sys_user" type="reference"/>
+        <element label="Expiry Date" max_length="40" name="expiry_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Vendor Code" max_length="40" name="number" type="string"/>
+        <element label="Contact Email" max_length="50" name="contact_email" type="string"/>
+        <element label="Last Reminder Date" max_length="40" name="last_reminder_date" type="glide_date"/>
+        <element choice="3" default="requested" label="Approval Status" max_length="40" name="approval_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Requested" sequence="0" value="requested"/>
+                <element inactive_on_update="false" label="Approved" sequence="1" value="approved"/>
+                <element inactive_on_update="false" label="Rejected" sequence="2" value="rejected"/>
+            </choice>
+        </element>
+        <element label="Start Date" max_length="40" name="start_date" type="glide_date"/>
+        <element label="Renewal Days" max_length="40" name="renewal_days" type="integer"/>
+        <element label="Vendor Contact" max_length="40" name="vendor_contact" type="string"/>
+        <element label="Contact Phone" max_length="40" name="contact_phone" type="phone_number_e164"/>
+        <index name="index">
+            <element name="vendor_manager"/>
+        </index>
+    </element>
+</database>

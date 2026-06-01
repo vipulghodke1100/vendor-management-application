@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="INSERT_OR_UPDATE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description/>
+        <elevated_privilege>false</elevated_privilege>
+        <federated_id>huWtUAKR/f6G3LvvizXXi1DG0ejFZfCc9gstVGXhm5c=</federated_id>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_1956466_vendor_0.vendor_requestor</name>
+        <scoped_admin>false</scoped_admin>
+        <suffix>vendor_requestor</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-01 06:40:40</sys_created_on>
+        <sys_id>a6520344c31187d04a2adf0d050131d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1956466_vendor_0.vendor_requestor</sys_name>
+        <sys_package display_value="Vendor Management" source="x_1956466_vendor_0">2b62d3bdc34507904a2adf0d05013159</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Management">2b62d3bdc34507904a2adf0d05013159</sys_scope>
+        <sys_update_name>sys_user_role_a6520344c31187d04a2adf0d050131d1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-01 06:40:40</sys_updated_on>
+    </sys_user_role>
+</record_update>
